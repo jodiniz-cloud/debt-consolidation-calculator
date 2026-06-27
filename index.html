@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Consolidation Calculator 2025 — Compare Payoff vs Consolidation</title>
+<meta name="description" content="Calculate how much you save by consolidating your debts. Enter up to 5 debts, compare current payments vs a single consolidation loan, and see total interest savings. Free, instant.">
+<link rel="canonical" href="https://debt-consolidation-calculator.pages.dev/">
+<meta property="og:title" content="Debt Consolidation Calculator 2025 — See Your Savings Instantly">
+<meta property="og:description" content="Compare paying debts separately vs consolidating into one loan. See monthly savings, total interest saved, and months shaved off your payoff timeline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://debt-consolidation-calculator.pages.dev/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6626869606288906" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Debt Consolidation Calculator","description":"Compare debt consolidation vs paying debts separately to find your savings in 2025","url":"https://debt-consolidation-calculator.pages.dev/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is debt consolidation?","acceptedAnswer":{"@type":"Answer","text":"Debt consolidation combines multiple debts (credit cards, personal loans, medical bills) into a single loan with one monthly payment. The goal is to get a lower interest rate than your current average, which reduces your monthly payment, total interest paid, or both. Common options include personal consolidation loans, balance transfer credit cards (0% intro APR), home equity loans, and HELOC."}},{"@type":"Question","name":"Does debt consolidation hurt your credit score?","acceptedAnswer":{"@type":"Answer","text":"Initially, applying for a consolidation loan causes a small, temporary dip (hard inquiry, ~5 points). However, consolidation can improve your score over time by: reducing your credit utilization ratio (if you consolidate credit card debt into a personal loan), diversifying your credit mix, and simplifying payments to avoid missed payments. Avoid closing the paid-off credit cards immediately — age of accounts matters."}},{"@type":"Question","name":"What credit score do I need to consolidate debt?","acceptedAnswer":{"@type":"Answer","text":"For a personal consolidation loan, most lenders require a credit score of 580–620 minimum, though scores of 670+ get significantly better rates. With a score below 580, consider credit counseling, a debt management plan (DMP), or secured loan options. Balance transfer cards typically require 670+. Home equity options (HELOC) require 620+ but use your home as collateral."}},{"@type":"Question","name":"What is the difference between debt consolidation and debt settlement?","acceptedAnswer":{"@type":"Answer","text":"Debt consolidation pays off your full debt balance through a new loan — your credit score is largely preserved and you pay 100% of what you owe. Debt settlement negotiates with creditors to pay less than you owe (typically 40–60 cents on the dollar). Settlement severely damages your credit score, may result in a 1099-C (forgiven debt is taxable income), but can eliminate debt faster if you're in severe financial hardship."}},{"@type":"Question","name":"When is debt consolidation NOT a good idea?","acceptedAnswer":{"@type":"Answer","text":"Consolidation is not a good idea if: (1) The new loan rate isn't lower than your current weighted average rate; (2) You extend the term so much that you pay more total interest even at a lower rate; (3) You continue spending on the paid-off credit cards and re-accumulate debt; (4) You use home equity to consolidate unsecured debt (you risk your home). Always run the numbers — our calculator shows you the true comparison."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
+header{background:linear-gradient(135deg,#7c2d12,#ea580c);color:#fff;padding:28px 20px 24px;text-align:center}
+header h1{font-size:clamp(20px,4vw,30px);font-weight:700}
+header p{margin-top:6px;opacity:.85;font-size:15px}
+.container{max-width:900px;margin:0 auto;padding:0 16px 60px}
+.ad-slot{background:#f1f5f9;border:1px dashed #cbd5e1;border-radius:8px;min-height:90px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:12px;margin:20px 0}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:28px;margin-top:24px}
+.card h2{font-size:18px;font-weight:700;color:#1e293b;margin-bottom:20px}
+.sec-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#64748b;margin:22px 0 14px;padding-bottom:6px;border-bottom:1px solid #f1f5f9}
+.debt-row{display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr auto;gap:10px;align-items:end;margin-bottom:10px}
+@media(max-width:640px){.debt-row{grid-template-columns:1fr 1fr;}.debt-row .debt-lbl{display:none}.debt-row .debt-del{grid-column:2;justify-self:end}}
+label{display:block;font-size:12px;font-weight:600;color:#475569;margin-bottom:4px}
+.hint{font-size:11px;color:#94a3b8;margin-top:3px}
+.input-wrap{position:relative}
+.prefix,.suffix{position:absolute;top:50%;transform:translateY(-50%);font-size:14px;color:#64748b;font-weight:600;pointer-events:none}
+.prefix{left:10px}.suffix{right:10px}
+input[type=number],input[type=text]{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;background:#f8fafc;color:#0f172a;font-size:15px;padding:9px 10px;outline:none;transition:border-color .2s}
+input[type=number]:focus,input[type=text]:focus{border-color:#ea580c;background:#fff}
+input.has-prefix{padding-left:24px}
+input.has-suffix{padding-right:32px}
+.del-btn{background:#fee2e2;border:none;border-radius:8px;color:#ef4444;font-size:18px;width:38px;height:38px;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-bottom:1px}
+.del-btn:hover{background:#fecaca}
+.add-btn{background:#fff7ed;border:1.5px dashed #fb923c;border-radius:8px;color:#ea580c;font-size:14px;font-weight:600;padding:10px 18px;cursor:pointer;margin-top:4px;transition:all .2s}
+.add-btn:hover{background:#ffedd5}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.grid-2{grid-template-columns:1fr}}
+.calc-btn{width:100%;margin-top:22px;padding:14px;background:linear-gradient(135deg,#7c2d12,#ea580c);color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer;transition:opacity .2s}
+.calc-btn:hover{opacity:.9}
+#results{display:none}
+.verdict-banner{border-radius:12px;padding:20px 24px;text-align:center;margin-bottom:20px}
+.verdict-banner.good{background:#f0fdf4;border:2px solid #86efac}
+.verdict-banner.bad{background:#fef2f2;border:2px solid #fca5a5}
+.verdict-banner h3{font-size:20px;font-weight:700}
+.verdict-banner.good h3{color:#15803d}
+.verdict-banner.bad h3{color:#dc2626}
+.verdict-banner p{font-size:14px;margin-top:6px}
+.verdict-banner.good p{color:#166534}
+.verdict-banner.bad p{color:#991b1b}
+.savings-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:20px}
+.s-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:12px;text-align:center}
+.s-box.green{background:#f0fdf4;border-color:#bbf7d0}
+.s-box.blue{background:#eff6ff;border-color:#bfdbfe}
+.s-box .s-label{font-size:11px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.4px}
+.s-box .s-val{font-size:22px;font-weight:800;color:#0f172a;margin-top:4px}
+.s-box.green .s-val{color:#15803d}
+.s-box.blue .s-val{color:#1d4ed8}
+.s-box .s-sub{font-size:11px;color:#94a3b8;margin-top:2px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+@media(max-width:500px){.compare-grid{grid-template-columns:1fr}}
+.cmp{border-radius:10px;padding:18px;border:2px solid}
+.cmp.current{border-color:#ef4444;background:#fef2f2}
+.cmp.consol{border-color:#22c55e;background:#f0fdf4}
+.cmp .ct{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.cmp.current .ct{color:#dc2626}
+.cmp.consol .ct{color:#15803d}
+.cmp .cmp-row{display:flex;justify-content:space-between;font-size:13px;color:#475569;padding:4px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.cmp .cmp-row:last-child{border:none;font-weight:700;color:#0f172a;font-size:14px}
+.debt-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+.debt-table th{background:#fff7ed;padding:8px 10px;text-align:left;font-size:12px;font-weight:700;color:#ea580c;text-transform:uppercase}
+.debt-table td{padding:8px 10px;border-bottom:1px solid #f1f5f9;color:#334155}
+.info-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:10px;padding:14px 16px;margin-top:16px;font-size:14px;color:#9a3412;line-height:1.7}
+.disclaimer{background:#f8fafc;border-radius:8px;padding:12px 16px;font-size:12px;color:#94a3b8;margin-top:16px}
+details{border-bottom:1px solid #f1f5f9;padding:14px 0}
+summary{font-size:15px;font-weight:600;cursor:pointer;color:#1e293b;list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:20px;color:#ea580c;font-weight:400}
+details[open] summary::after{content:'−'}
+details p{margin-top:10px;color:#475569;font-size:14px;line-height:1.7}
+footer{text-align:center;color:#94a3b8;font-size:12px;padding:20px;border-top:1px solid #e2e8f0;margin-top:40px}
+footer a{color:#64748b}
+.lbl-row{display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr auto;gap:10px;margin-bottom:4px}
+.lbl-row span{font-size:12px;font-weight:600;color:#475569}
+@media(max-width:640px){.lbl-row{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <h1>💳 Debt Consolidation Calculator</h1>
+  <p>Compare your debts vs one consolidated loan — see exact savings 2025</p>
+</header>
+<div class="container">
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6626869606288906" data-ad-slot="1122334455" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="card">
+    <h2>📋 Your Current Debts</h2>
+    <div class="lbl-row"><span>Debt name</span><span>Balance</span><span>Rate</span><span>Min. payment</span><span></span></div>
+    <div id="debt-list"></div>
+    <button class="add-btn" onclick="addDebt()">+ Add another debt</button>
+
+    <div class="sec-label">Consolidation Loan Terms</div>
+    <div class="grid-2">
+      <div>
+        <label for="consol-rate">Consolidation Loan Rate (APR)</label>
+        <div class="input-wrap"><input type="number" id="consol-rate" class="has-suffix" value="12.5" min="1" max="36" step="0.1"><span class="suffix">%</span></div>
+        <div class="hint">Personal loans avg 12–25% APR in 2025. Check your pre-qualified offers.</div>
+      </div>
+      <div>
+        <label for="consol-term">Loan Term</label>
+        <select id="consol-term">
+          <option value="24">2 years</option>
+          <option value="36" selected>3 years</option>
+          <option value="48">4 years</option>
+          <option value="60">5 years</option>
+          <option value="84">7 years</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calculate()">Calculate My Savings →</button>
+  </div>
+
+  <div id="results">
+    <div class="card">
+      <div class="verdict-banner" id="verdict-banner"></div>
+      <div class="savings-grid" id="savings-grid"></div>
+      <div class="compare-grid" id="compare-grid"></div>
+      <div id="debt-breakdown"></div>
+      <div class="info-box" id="info-box"></div>
+      <div class="disclaimer">⚠️ Estimates only. Actual loan rates depend on your credit score and lender. Always compare multiple offers. Balance transfer cards may offer 0% APR for 12–21 months — check if eligible before taking a personal loan.</div>
+    </div>
+  </div>
+
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6626869606288906" data-ad-slot="2233445566" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <details open><summary>What is debt consolidation?</summary><p>Debt consolidation combines multiple debts into a single loan with one monthly payment. The goal is to get a lower interest rate, reducing your monthly payment, total interest paid, or both. Common options include personal consolidation loans, balance transfer credit cards (0% intro APR), home equity loans, and HELOC.</p></details>
+    <details><summary>Does debt consolidation hurt your credit score?</summary><p>Initially, applying for a consolidation loan causes a small, temporary dip (~5 points from a hard inquiry). However, consolidation can improve your score over time by reducing credit utilization (if you consolidate card debt into a personal loan) and simplifying payments to avoid missed payments. Avoid closing paid-off cards immediately — account age matters.</p></details>
+    <details><summary>What credit score do I need to consolidate debt?</summary><p>For a personal consolidation loan, most lenders require 580–620 minimum, though scores of 670+ get significantly better rates. Balance transfer cards typically require 670+. Home equity options require 620+ but use your home as collateral.</p></details>
+    <details><summary>What is the difference between debt consolidation and debt settlement?</summary><p>Debt consolidation pays your full balance through a new loan — credit score is largely preserved. Debt settlement negotiates to pay less than you owe (40–60 cents on the dollar). Settlement severely damages your credit and forgiven debt may be taxable income (1099-C).</p></details>
+    <details><summary>When is debt consolidation NOT a good idea?</summary><p>Consolidation is not ideal if: the new rate isn't lower than your current weighted average; you extend the term so much that total interest is higher; you re-accumulate debt on paid-off cards; or you use home equity to consolidate unsecured debt (risking your home). Always run the numbers first.</p></details>
+  </div>
+
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6626869606288906" data-ad-slot="3344556677" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+</div>
+
+<footer><p>DebtConsolidationCalculator · Estimates only. Not financial advice. Always compare multiple lenders.</p><p style="margin-top:6px"><a href="/privacy.html">Privacy Policy</a></p></footer>
+
+<script>
+const fmt=n=>'$'+Math.round(Math.abs(n)).toLocaleString('en-US');
+const fmtPct=n=>n.toFixed(1)+'%';
+
+let debts=[
+  {name:'Credit Card 1',balance:8000,rate:24.99,payment:200},
+  {name:'Credit Card 2',balance:5000,rate:22.99,payment:130},
+  {name:'Personal Loan',balance:12000,rate:18.0,payment:350}
+];
+
+function pmt(r,n,pv){if(r===0)return pv/n;return pv*(r*Math.pow(1+r,n))/(Math.pow(1+r,n)-1);}
+
+function monthsToPayoff(balance,rate,payment){
+  const r=rate/100/12;
+  if(r===0)return Math.ceil(balance/payment);
+  if(payment<=balance*r)return Infinity;
+  return Math.ceil(-Math.log(1-(balance*r/payment))/Math.log(1+r));
+}
+
+function totalInterest(balance,rate,payment){
+  const n=monthsToPayoff(balance,rate,payment);
+  if(!isFinite(n))return Infinity;
+  return payment*n-balance;
+}
+
+function renderDebts(){
+  const dl=document.getElementById('debt-list');
+  dl.innerHTML='';
+  debts.forEach((d,i)=>{
+    dl.innerHTML+=`<div class="debt-row" id="debt-row-${i}">
+      <div><input type="text" value="${d.name}" onchange="debts[${i}].name=this.value" placeholder="Debt name"></div>
+      <div><div class="input-wrap"><span class="prefix">$</span><input type="number" class="has-prefix" value="${d.balance}" min="0" step="100" onchange="debts[${i}].balance=parseFloat(this.value)||0"></div></div>
+      <div><div class="input-wrap"><input type="number" class="has-suffix" value="${d.rate}" min="0" max="60" step="0.1" onchange="debts[${i}].rate=parseFloat(this.value)||0"><span class="suffix">%</span></div></div>
+      <div><div class="input-wrap"><span class="prefix">$</span><input type="number" class="has-prefix" value="${d.payment}" min="0" step="10" onchange="debts[${i}].payment=parseFloat(this.value)||0"></div></div>
+      <div><button class="del-btn" onclick="removeDebt(${i})" title="Remove">×</button></div>
+    </div>`;
+  });
+}
+
+function addDebt(){
+  if(debts.length>=6)return;
+  debts.push({name:`Debt ${debts.length+1}`,balance:3000,rate:20,payment:80});
+  renderDebts();
+}
+
+function removeDebt(i){
+  if(debts.length<=1)return;
+  debts.splice(i,1);
+  renderDebts();
+}
+
+function calculate(){
+  const consolRate=parseFloat(document.getElementById('consol-rate').value)||12.5;
+  const consolTermMo=parseInt(document.getElementById('consol-term').value)||36;
+
+  const totalBalance=debts.reduce((s,d)=>s+d.balance,0);
+  const totalCurrentPayment=debts.reduce((s,d)=>s+d.payment,0);
+  const weightedRate=debts.reduce((s,d)=>s+d.rate*d.balance,0)/Math.max(totalBalance,1);
+
+  let totalCurrentInterest=0;
+  let maxMonths=0;
+  debts.forEach(d=>{
+    const ti=totalInterest(d.balance,d.rate,d.payment);
+    totalCurrentInterest+=isFinite(ti)?ti:d.balance*10;
+    const m=monthsToPayoff(d.balance,d.rate,d.payment);
+    if(isFinite(m)&&m>maxMonths)maxMonths=m;
+  });
+
+  const consolPayment=pmt(consolRate/100/12,consolTermMo,totalBalance);
+  const consolInterest=consolPayment*consolTermMo-totalBalance;
+  const interestSaved=totalCurrentInterest-consolInterest;
+  const monthlySaved=totalCurrentPayment-consolPayment;
+  const monthsSaved=maxMonths-consolTermMo;
+
+  const isGood=consolRate<weightedRate&&interestSaved>0;
+
+  // Verdict
+  const vb=document.getElementById('verdict-banner');
+  vb.className=`verdict-banner ${isGood?'good':'bad'}`;
+  vb.innerHTML=isGood
+    ?`<h3>✅ Consolidation saves you money</h3><p>Your current weighted rate is ${fmtPct(weightedRate)} — the ${fmtPct(consolRate)} consolidation loan is lower. You save ${fmt(interestSaved)} in total interest.</p>`
+    :`<h3>⚠️ Consolidation may cost more</h3><p>Your consolidation rate (${fmtPct(consolRate)}) is ${consolRate>weightedRate?'higher than':'similar to'} your current weighted rate (${fmtPct(weightedRate)}). Improve your credit score or find a lower rate offer for this to make sense.</p>`;
+
+  // Savings grid
+  document.getElementById('savings-grid').innerHTML=`
+    <div class="s-box green"><div class="s-label">Interest saved</div><div class="s-val">${fmt(Math.max(0,interestSaved))}</div><div class="s-sub">total over life of loan</div></div>
+    <div class="s-box"><div class="s-label">Monthly change</div><div class="s-val">${monthlySaved>=0?'-'+fmt(monthlySaved):'+'+fmt(-monthlySaved)}</div><div class="s-sub">${monthlySaved>=0?'lower payment':'higher payment'}/mo</div></div>
+    <div class="s-box blue"><div class="s-label">Payoff in</div><div class="s-val">${consolTermMo} mo</div><div class="s-sub">${monthsSaved>0?`${monthsSaved} mo faster`:'vs '+maxMonths+' mo now'}</div></div>
+    <div class="s-box"><div class="s-label">New rate</div><div class="s-val">${fmtPct(consolRate)}</div><div class="s-sub">vs ${fmtPct(weightedRate)} avg now</div></div>
+  `;
+
+  // Compare grid
+  document.getElementById('compare-grid').innerHTML=`
+    <div class="cmp current">
+      <div class="ct">Current situation</div>
+      <div class="cmp-row"><span>Total debt</span><span>${fmt(totalBalance)}</span></div>
+      <div class="cmp-row"><span>Monthly payments</span><span>${fmt(totalCurrentPayment)}</span></div>
+      <div class="cmp-row"><span>Weighted avg rate</span><span>${fmtPct(weightedRate)}</span></div>
+      <div class="cmp-row"><span>Total interest</span><span>${fmt(totalCurrentInterest)}</span></div>
+      <div class="cmp-row"><span>Est. payoff</span><span>${isFinite(maxMonths)?maxMonths+' months':'varies'}</span></div>
+    </div>
+    <div class="cmp consol">
+      <div class="ct">After consolidation</div>
+      <div class="cmp-row"><span>Total debt</span><span>${fmt(totalBalance)}</span></div>
+      <div class="cmp-row"><span>Monthly payment</span><span>${fmt(consolPayment)}</span></div>
+      <div class="cmp-row"><span>Interest rate</span><span>${fmtPct(consolRate)}</span></div>
+      <div class="cmp-row"><span>Total interest</span><span>${fmt(consolInterest)}</span></div>
+      <div class="cmp-row"><span>Payoff</span><span>${consolTermMo} months</span></div>
+    </div>
+  `;
+
+  // Debt breakdown
+  let tableHTML=`<div style="margin-top:20px;font-size:14px;font-weight:700;color:#0f172a;margin-bottom:8px">Your debts breakdown</div>
+    <table class="debt-table"><thead><tr><th>Debt</th><th>Balance</th><th>Rate</th><th>Min. payment</th><th>Months to pay off</th><th>Total interest</th></tr></thead><tbody>`;
+  debts.forEach(d=>{
+    const m=monthsToPayoff(d.balance,d.rate,d.payment);
+    const ti=totalInterest(d.balance,d.rate,d.payment);
+    tableHTML+=`<tr><td>${d.name}</td><td>${fmt(d.balance)}</td><td>${fmtPct(d.rate)}</td><td>${fmt(d.payment)}</td><td>${isFinite(m)?m+' mo':'∞'}</td><td>${isFinite(ti)?fmt(ti):'∞'}</td></tr>`;
+  });
+  tableHTML+=`<tr style="font-weight:700;background:#f8fafc"><td>Total</td><td>${fmt(totalBalance)}</td><td>${fmtPct(weightedRate)} avg</td><td>${fmt(totalCurrentPayment)}</td><td>${isFinite(maxMonths)?maxMonths+' mo':'varies'}</td><td>${fmt(totalCurrentInterest)}</td></tr></tbody></table>`;
+  document.getElementById('debt-breakdown').innerHTML=tableHTML;
+
+  // Info
+  const infoEl=document.getElementById('info-box');
+  if(!isGood){infoEl.textContent=`💡 To make consolidation worthwhile, find a rate below ${fmtPct(weightedRate)} (your current weighted average). Check pre-qualified offers at multiple lenders or improve your credit score first. A balance transfer card with 0% APR for 12–21 months may be better for smaller balances.`;}
+  else if(monthlySaved<0){infoEl.textContent=`💡 Your monthly payment increases by ${fmt(-monthlySaved)}, but you save ${fmt(interestSaved)} in total interest and pay off ${monthsSaved>0?monthsSaved+' months earlier':'on a fixed schedule'}. This is the right tradeoff if you can handle the higher payment.`;}
+  else{infoEl.textContent=`💡 Great outcome — you save ${fmt(monthlySaved)}/month AND ${fmt(interestSaved)} in total interest. After consolidating, do NOT use the paid-off credit cards again or you'll rebuild the same debt problem.`;}
+
+  document.getElementById('results').style.display='block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+renderDebts();
+window.addEventListener('DOMContentLoaded',()=>{renderDebts();});
+</script>
+</body>
+</html>
